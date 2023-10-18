@@ -1,0 +1,162 @@
+﻿@model Firsttutorials.ViewModel.testtablesviewmodel;
+@using MySql.Data.MySqlClient;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="kt-portlet kt-portlet--mobile">
+        @* --input data interface start-- *@
+    <div class="kt-portlet__head">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                Insert Data
+            </h3>
+        </div>
+    </div>
+    <div class="kt-portlet__body">
+        <form>
+        <div class="form-group row">
+            <label class="col-lg-2 col-form-label">Cost center no:</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-lg-2 col-form-label">Grant Reference No:</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-lg-2 col-form-label">Staff No:</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="kt-portlet__foot">
+            <div class="kt-form__actions">
+                <div class="row">
+                    <label class="col-lg-2 col-form-label"></label>
+                    <div class="col-lg-6">
+                        <button type="submit" class="btn btn-success">Search</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>      
+        </form>
+        @* --input data interface end-- *@
+    </div>
+</div>
+<br />
+<div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__head">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                Display Data
+            </h3>
+        </div>
+    </div>
+    <div class="kt-portlet__body">
+        @* --Table display data start-- *@
+        <table width="100%" id="#" class="table table-striped- table-bordered table-hover table-checkable">
+            <thead>
+                <tr>
+                    <td>No</td>
+                    <td>Reference No</td>
+                    <td>Staff No</td>
+                    <td>PL Name</td>
+                    <td>Project Title</td>
+                    <td>Status</td>
+                    <td>Date Open</td>
+                    <td>Date Closed</td>
+                    <td>Payment Type</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+        </table>
+        <br />
+    </div>
+</div>
+        @* --Table display data end-- *@
+        <br />
+<div class="kt-portlet kt-portlet--mobile">  
+    <div class="kt-portlet__head">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                Update Data
+            </h3>
+        </div>
+    </div>
+    <div class="kt-portlet__body">
+        @* --Update data start-- *@
+        <form>
+        @* --Reference no-- *@
+        <div class="form-group row">
+            <label class="col-lg-2 col-form-label">Reference no:</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        @* --staff no-- *@
+        <div class="form-group row">
+            <label class="col-lg-2 col-form-label">Staff No:</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        @* --pl name-- *@
+        <div class="form-group row">
+            <label class="col-lg-2 col-form-label">PL Name:</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        @* --project title-- *@
+        <div class="form-group row">
+            <label class="col-lg-2 col-form-label">Project Title:</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+            @* --payment type Dropdown-- *@
+        <div class="form-group row">
+            <label class="col-lg-2 col-form-label">Payment Type:</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        @* --status claim Dropdown-- *@
+        <div class="form-group row">
+            <label class="col-lg-2 col-form-label">Status Claim</label>
+            <div class="col-lg-6">
+                    <div form-control>
+                        <select class="form-control" name="STATUS_CLAIM_DROPDOWN" id="status-claim-dropdown">
+                            <option class="dropdown-item" value="1">Open</option>
+                            <option class="dropdown-item" value="0">Close</option>
+                        </select>
+                    </div>
+            </div>
+        </div>
+        @* --save reset cancel button-- *@
+        <div class="kt-portlet__foot">
+            <div class="kt-form__actions">
+                <div class="row">
+                    <label class="col-lg-2 col-form-label"></label>
+                    <div class="col-lg-6">
+                        <button type="submit" class="btn btn-success">Save</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                        <button type="reset" class="btn btn-info">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+        @* --Update data end-- *@
+    </div>
+</div>
+
+
+<script src="~/js/jquery-3.4.1.js"></script>
+<script src="~/js/insertviewfamilyjavascript.js"></script>

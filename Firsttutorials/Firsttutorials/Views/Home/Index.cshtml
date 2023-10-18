@@ -1,0 +1,46 @@
+﻿@using Firsttutorials.Models;
+
+@{
+
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<p>1. View The Database</p>
+<table border="1" width="33%">
+    <tr>
+
+      //  @Model.Listtesttable[0].id;
+            
+        <td>
+               Id   
+        </td>
+        <td>
+                FirstName
+        </td>
+        <td>
+               secondName
+        </td>
+       
+    </tr> 
+    <tr>
+     @*       @foreach (var testtablesmodel in model)
+        {
+        <td>
+            @testtablesmodel.id[1];
+        </td>
+        <td>
+            @testtablesmodel.firstName[1];
+        </td>
+        <td>
+            @testtablesmodel.secondName[1];
+        </td>
+        } *@
+    </tr>
+
+</table>
